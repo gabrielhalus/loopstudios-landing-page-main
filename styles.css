@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+}
+
+/* Normalize */
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: 15px;
+    font-family: 'Alata', sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif; */
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.section {
+    margin-bottom: 20vh;
+}
+
+.container {
+    height: 100%;
+    max-width: 1440px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* -------------------- */
+/*    Header section    */
+/* -------------------- */
+
+#header {
+    height: 80vh;
+    padding-top: 8vh;
+
+    background-image: url(./images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#header .container {
+    position: relative;
+}
+
+/* ------ */
+/* Navbar */
+/* ------ */
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-links {
+    list-style: none;
+    width: 375px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-links li {
+    display: inline;
+}
+
+#nav-links li a {
+    color: var(--white);
+    text-decoration: none;
+    position: relative;
+}
+
+#nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 0;
+    border: none;
+
+    transition: width .3s ease;
+}
+
+#nav-links li a:hover::after {
+    border: 1px solid var(--white);
+    width: 60%;
+}
+
+/* ------------- */
+/* Primary title */
+/* ------------- */
+
+#primary-title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 60%;
+    padding: 50px 50px calc(50px - 1.2rem) 50px;
+    border: 3px solid var(--white);
+}
+
+#primary-title h1 {
+    color: var(--white);
+    font-size: 5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+/* -------------------- */
+/* Presentation Section *
+/* -------------------- */
+
+#presentation .container {
+    position: relative;
+}
+
+#interactive-img {
+    width: 70%;
+    vertical-align: bottom;
+}
+
+#presentation-text {
+    width: 45%;
+    padding: 75px 0 0 75px;
+    background: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#presentation-text h1 {
+    color: var(--black);
+    font-size: 3rem;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+#presentation-text p {
+    color: var(--dark-gray);
+}
+
+/* -------------------- */
+/*   Portfolio section  */
+/* -------------------- */
+
+#grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+}
+
+.grid-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(9,9,121,0) 70%, rgba(0,212,255,0) 100%);
+}
+
+.grid-item h2 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+    color: var(--white);
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+/* ----------------- */
+/*   Footer section  */
+/* ----------------- */
+
+#footer {
+    background: var(--black);
+}
+
+#footer .container {
+    
+}
