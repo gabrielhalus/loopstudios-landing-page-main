@@ -76,10 +76,6 @@ img {
     justify-content: space-between;
 }
 
-#nav-links li {
-    display: inline;
-}
-
 #nav-links li a {
     color: var(--white);
     text-decoration: none;
@@ -89,7 +85,7 @@ img {
 #nav-links li a::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -213,5 +209,33 @@ img {
 }
 
 #footer .container {
-    
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+#footer .left,
+#footer .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+#socials {
+    list-style: none;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+#socials li {
+    cursor: pointer;
+}
+
+#copy {
+    color: var(--very-dark-gray);
+    padding: 0;
+    margin: 0;
 }
